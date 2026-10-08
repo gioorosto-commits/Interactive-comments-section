@@ -1,0 +1,265 @@
+/* მთელი გვერდისთვის */
+body{
+    Background-color: hsl(228, 33%, 97%);     /* ძალიან ღია ნაცრისფერი ფონი */
+    Font-family: 'Rubik', Arial, sans-serif;  /* შრიფტი */
+    Min-height: 100vh;                        /* მინიმალური სიმაღლე */
+    Margin: 0;                                /* კიდეების წაშლა */
+    Padding: 40px 20px;                       /* შიდა დაშორება */
+    Display: flex;                            /* Flexbox */
+    Justify-content: center;                  /* ჰორიზონტალურად ცენტრში */
+}
+
+/* მთავარი კონტეინერი */
+.container{
+    Width: 100%;                              /* სრული სიგანე */
+    Max-width: 730px;                         /* მაქსიმალური სიგანე */
+    Display: flex;                            /* Flexbox */
+    Flex-direction: column;                   /* ვერტიკალურად ჩალაგება */
+    Gap: 20px;                                /* დაშორება კომენტარებს შორის */
+}
+
+/* კომენტარის ბარათი */
+.comment{
+    Background-color: white;                  /* თეთრი ფონი */
+    Border-radius: 8px;                       /* მომრგვალებული კუთხეები */
+    Padding: 24px;                            /* შიდა დაშორება */
+    Display: flex;                            /* Flexbox */
+    Gap: 24px;                                /* დაშორება ვოუთსა და ტექსტს შორის */
+    Box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);/* მსუბუქი ჩრდილი */
+}
+
+/* ჩაშენებული პასუხების კონტეინერი (ვერტიკალური ხაზით) */
+.replies{
+    Display: flex;                            /* Flexbox */
+    Flex-direction: column;                   /* ვერტიკალურად ჩალაგება */
+    Gap: 20px;                                /* დაშორება */
+    Margin-left: 45px;                        /* მარცხნიდან დაშორება */
+    Padding-left: 25px;                       /* შიდა დაშორება */
+    Border-left: 2px solid hsl(223, 19%, 93%);/* ვერტიკალური ხაზი */
+}
+
+/* ვოუთის სექცია (+, ციფრი, -) */
+.vote-section{
+    Background-color: hsl(228, 33%, 97%);     /* ღია ნაცრისფერი ფონი */
+    Border-radius: 8px;                       /* მომრგვალებული */
+    Padding: 8px 6px;                         /* შიდა დაშორება */
+    Display: flex;                            /* Flexbox */
+    Flex-direction: column;                   /* ვერტიკალურად ჩალაგება */
+    Align-items: center;                      /* ცენტრში */
+    Justify-content: space-between;           /* თანაბრად განაწილება */
+    Height: fit-content;                      /* სიმაღლე შიგთავსის მიხედვით */
+    Min-width: 40px;                          /* მინიმალური სიგანე */
+}
+
+/* ვოუთის ღილაკები (+ და -) */
+.vote-btn{
+    Background: none;                         /* ფონი არა */
+    Border: none;                             /* ჩარჩო არა */
+    Cursor: pointer;                          /* ხელის კურსორი */
+    Padding: 4px;                             /* შიდა დაშორება */
+}
+
+/* ვოუთის ციფრი */
+.vote-count{
+    Color: hsl(238, 40%, 52%);                /* ლურჯი ტექსტი */
+    Font-weight: bold;                        /* მუქი */
+    Font-size: 16px;                          /* ზომა */
+}
+
+/* კომენტარის კონტენტი */
+.comment-content{
+    Flex: 1;                                  /* იკავებს დარჩენილ ადგილს */
+}
+
+/* კომენტარის თავი (სახელი, დრო, ღილაკები) */
+.comment-header{
+    Display: flex;                            /* Flexbox */
+    Justify-content: space-between;           /* გვერდებზე განაწილება */
+    Align-items: center;                      /* ვერტიკალურად ცენტრში */
+    Margin-bottom: 16px;                      /* დაშორება ქვემოთ */
+}
+
+/* მომხმარებლის ინფო */
+.user-info{
+    Display: flex;                            /* Flexbox */
+    Align-items: center;                      /* ვერტიკალურად ცენტრში */
+    Gap: 12px;                                /* დაშორება ელემენტებს შორის */
+}
+
+/* ავატარის სურათი */
+.avatar{
+    Width: 32px;                              /* სიგანე */
+    Height: 32px;                             /* სიმაღლე */
+    Border-radius: 50%;                       /* მრგვალი ხდება */
+}
+
+/* მომხმარებლის სახელი */
+.username{
+    Color: hsl(212, 24%, 26%);                /* მუქი ლურჯი */
+    Font-weight: bold;                        /* მუქი */
+    Font-size: 16px;                          /* ზომა */
+}
+
+/* "you" ბეჯი */
+.you-badge{
+    Background-color: hsl(238, 40%, 52%);     /* ლურჯი ფონი */
+    Color: white;                             /* თეთრი ტექსტი */
+    Font-size: 12px;                          /* პატარა ზომა */
+    Font-weight: bold;                        /* მუქი */
+    Padding: 2px 6px;                         /* შიდა დაშორება */
+    Border-radius: 2px;                       /* მომრგვალებული */
+}
+
+/* დრო (1 month ago) */
+.time{
+    Color: hsl(211, 10%, 45%);                /* ნაცრისფერი */
+    Font-size: 14px;                          /* ზომა */
+}
+
+/* Reply ღილაკი */
+.reply-btn{
+    Background: none;                         /* ფონი არა */
+    Border: none;                             /* ჩარჩო არა */
+    Color: hsl(238, 40%, 52%);                /* ლურჯი ტექსტი */
+    Font-weight: bold;                        /* მუქი */
+    Font-size: 14px;                          /* ზომა */
+    Cursor: pointer;                          /* ხელის კურსორი */
+    Display: flex;                            /* Flexbox */
+    Align-items: center;                      /* ცენტრში */
+    Gap: 6px;                                 /* დაშორება იკონკასა და ტექსტს შორის */
+}
+
+/* Delete და Edit ღილაკების კონტეინერი */
+.action-buttons{
+    Display: flex;                            /* Flexbox */
+    Gap: 16px;                                /* დაშორება ღილაკებს შორის */
+}
+
+/* Delete ღილაკი */
+.delete-btn{
+    Background: none;                         /* ფონი არა */
+    Border: none;                             /* ჩარჩო არა */
+    Color: hsl(358, 79%, 66%);                /* წითელი ტექსტი */
+    Font-family: 'Rubik', Arial, sans-serif;  /* შრიფტი */
+    Font-weight: bold;                        /* მუქი */
+    Font-size: 14px;                          /* ზომა */
+    Cursor: pointer;                          /* ხელის კურსორი */
+    Display: flex;                            /* Flexbox */
+    Align-items: center;                      /* ცენტრში */
+    Gap: 6px;                                 /* დაშორება */
+}
+
+/* Edit ღილაკი */
+.edit-btn{
+    Background: none;                         /* ფონი არა */
+    Border: none;                             /* ჩარჩო არა */
+    Color: hsl(238, 40%, 52%);                /* ლურჯი ტექსტი */
+    Font-family: 'Rubik', Arial, sans-serif;  /* შრიფტი */
+    Font-weight: bold;                        /* მუქი */
+    Font-size: 14px;                          /* ზომა */
+    Cursor: pointer;                          /* ხელის კურსორი */
+    Display: flex;                            /* Flexbox */
+    Align-items: center;                      /* ცენტრში */
+    Gap: 6px;                                 /* დაშორება */
+}
+
+/* კომენტარის ტექსტი */
+.comment-text{
+    Color: hsl(211, 10%, 45%);                /* ნაცრისფერი */
+    Font-size: 16px;                          /* ზომა */
+    Line-height: 1.6;                         /* ხაზებს შორის დაშორება */
+    Margin: 0;
+}
+
+/* @მენშენი (მაგ: @maxblagun) */
+.mention{
+    Color: hsl(238, 40%, 52%);                /* ლურჯი */
+    Font-weight: bold;                        /* მუქი */
+}
+
+/* კომენტარის დამატების ფორმა */
+.add-comment{
+    Background-color: white;                  /* თეთრი ფონი */
+    Border-radius: 8px;                       /* მომრგვალებული */
+    Padding: 24px;                            /* შიდა დაშორება */
+    Display: flex;                            /* Flexbox */
+    Gap: 24px;                                /* დაშორება */
+    Align-items: flex-start;                  /* ზემოდან გასწორება */
+    Box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);/* ჩრდილი */
+}
+
+.add-comment .avatar{
+    Width: 40px;                              /* უფრო დიდი ავატარი */
+    Height: 40px;
+    Margin-top: 4px;
+}
+
+/* ტექსტის ველი */
+.add-comment textarea{
+    Flex: 1;                                  /* იკავებს დარჩენილ ადგილს */
+    Border: 1px solid hsl(223, 19%, 93%);     /* ღია ნაცრისფერი ჩარჩო */
+    Border-radius: 8px;                       /* მომრგვალებული */
+    Padding: 12px 16px;                       /* შიდა დაშორება */
+    Font-family: 'Rubik', Arial, sans-serif;  /* შრიფტი */
+    Font-size: 15px;                          /* ზომა */
+    Color: hsl(212, 24%, 26%);                /* მუქი ტექსტი */
+    Resize: none;                             /* ზომის შეცვლის გამორთვა */
+    Min-height: 80px;                         /* მინიმალური სიმაღლე */
+    Outline: none;                            /* სტანდარტული outline-ის წაშლა */
+}
+
+/* SEND ღილაკი */
+.send-btn{
+    Background-color: hsl(238, 40%, 52%);     /* ლურჯი ფონი */
+    Color: white;                             /* თეთრი ტექსტი */
+    Border: none;                             /* ჩარჩო არა */
+    Border-radius: 8px;                       /* მომრგვალებული */
+    Padding: 12px 28px;                       /* შიდა დაშორება */
+    Font-family: 'Rubik', Arial, sans-serif;  /* შრიფტი */
+    Font-weight: bold;                        /* მუქი */
+    Font-size: 14px;                          /* ზომა */
+    Letter-spacing: 1px;                      /* ასოებს შორის დაშორება */
+    Cursor: pointer;                          /* ხელის კურსორი */
+    Margin-top: 4px;
+}
+
+/* Hover ეფექტები */
+.vote-btn:hover, .reply-btn:hover, .send-btn:hover, .delete-btn:hover, .edit-btn:hover{
+    Opacity: 0.7;                             /* ოდნავ გამჭვირვალე ხდება */
+}
+
+/* მობილურის ვერსია */
+@media (max-width: 600px) {
+    .comment{
+        Flex-direction: column-reverse;       /* ვოუთი ქვემოთ, ტექსტი ზემოთ */
+        Padding: 16px;
+        Gap: 16px;
+    }
+
+    .vote-section{
+        Flex-direction: row;                  /* ვოუთი ჰორიზონტალურად */
+        Width: fit-content;
+        Padding: 8px 12px;
+        Gap: 12px;
+    }
+
+    .replies{
+        Margin-left: 15px;                    /* ნაკლები დაშორება მობილურზე */
+        Padding-left: 15px;
+    }
+
+    .add-comment{
+        Flex-direction: column;               /* ფორმა ვერტიკალურად */
+        Align-items: stretch;
+    }
+
+    .add-comment .avatar{
+        Width: 32px;
+        Height: 32px;
+    }
+
+    .send-btn{
+        Width: fit-content;
+        Align-self: flex-end;                 /* ღილაკი მარჯვნივ */
+    }
+}
